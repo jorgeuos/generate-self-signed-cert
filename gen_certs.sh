@@ -32,8 +32,11 @@ EOT
 # Set vars
 #DOMAIN=$1 SET THIS IN BEGINNING
 DEVDOMAIN=${DOMAIN}
+
 # I don't remember why I'm not using this :s
+# shellcheck disable=SC2034
 COMMON_NAME=${2:-*.$1}
+
 SUBJECT="/C=SE/ST=Stockholm/L=Stockholm/O=Digitalist/CN=$DOMAIN"
 NUM_OF_DAYS=365
 ROOTNAME="rootCA"

@@ -23,19 +23,19 @@ sudo service httpd restart
 ```
 ## Fix self signed certificate error for Chrome on mac
 
-Open `Keychain Access`, easiest is to use keyboard shortcut `cmd+space` and type `Keychain Access`  
+Open `Keychain Access`, easiest is to use keyboard shortcut `cmd+space` and type `Keychain Access`
 
-Drag and drop certificate that you just created `/PATH/TO/CERT/DOMAIN.dev.crt` into `Keychain Access` and the category `Certificates`  
+Drag and drop certificate that you just created `/PATH/TO/CERT/DOMAIN.dev.crt` into `Keychain Access` and the category `Certificates`
 
 ![alt "Keychain Access"](https://raw.githubusercontent.com/jorgeuos/generate-self-signed-cert/main/assets/images/keychain_access.png)
 
-Double click the certificate, open the `Trust` accordion by clicking the chevron.  
+Double click the certificate, open the `Trust` accordion by clicking the chevron.
 
-Change the `When using this certificate:` to `Always Trust`  
+Change the `When using this certificate:` to `Always Trust`
 
 ![alt "Always Trust"](https://raw.githubusercontent.com/jorgeuos/generate-self-signed-cert/main/assets/images/always_trust.png)
 
-Close window and verify with your computer password  
+Close window and verify with your computer password
 
 ## Example of a vhost
 
@@ -47,7 +47,7 @@ Apache:
 
 ```conf
 <VirtualHost *:443>
-    ServerAdmin jorguos@github
+    ServerAdmin jorgeuos@github
     ServerName DOMAIN_NAME.dev
     ServerAlias DOMAIN_NAME.dev www.DOMAIN_NAME.dev
     DocumentRoot /srv/www/DOMAIN_NAME/web
@@ -107,7 +107,7 @@ http {
 
         server_name DOMAIN_NAME;
         root /var/www/html/;
-        
+
         index index.php index.html index.htm;
         client_max_body_size 2m;
         location / {
