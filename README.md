@@ -117,3 +117,15 @@ http {
 }
 
 ```
+
+## New Chrome updates blocks anyways
+
+It is still unsafe to override these settings, but if you must.
+
+You can try:
+
+1. Type `thisisunsafe` when viewing the tab in chrome
+2. Open the inspector and run command
+```js
+sendCommand(SecurityInterstitialCommandId.CMD_PROCEED)
+```
